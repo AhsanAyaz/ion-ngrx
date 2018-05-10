@@ -7,7 +7,7 @@ import { IonicModule } from '@ionic/angular';
 import { AppComponent } from './app.component';
 
 import env from '../environment';
-import { APP_REDUCERS, appDefaultState } from './store';
+import { APP_REDUCERS, appInitialState } from './store';
 
 @NgModule({
   declarations: [AppComponent],
@@ -15,7 +15,7 @@ import { APP_REDUCERS, appDefaultState } from './store';
   imports: [
     BrowserModule,
     StoreModule.forRoot(APP_REDUCERS, {
-      initialState: appDefaultState
+      initialState: appInitialState
     }),
     env.name === 'development'
       ? StoreDevtoolsModule.instrument({ maxAge: 10 })

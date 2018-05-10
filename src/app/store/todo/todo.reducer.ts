@@ -1,7 +1,7 @@
 import * as TodoActions from './todo.actions';
 import { Todo } from '../../model';
 
-export const defaultState = [];
+export const initialState = [];
 
 const newTodo = (state, payload) => [...state, { ...payload, id: Date.now() }];
 const removeTodo = (state, payload) => state.filter(e => e.id !== payload.id);
@@ -12,7 +12,7 @@ const toggleTodo = (state, payload) =>
   );
 
 export function todosReducer(
-  state: Array<Todo> = defaultState,
+  state: Array<Todo> = initialState,
   action: TodoActions.All
 ) {
   switch (action.type) {

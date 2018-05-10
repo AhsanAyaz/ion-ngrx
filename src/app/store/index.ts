@@ -7,8 +7,8 @@ export interface AppState {
   todos: Array<Todo>;
 }
 
-export const appDefaultState: AppState = {
-  todos: fromTodo.defaultState
+export const appInitialState: AppState = {
+  todos: fromTodo.initialState
 };
 
 // map all the core (not feature) reducers
